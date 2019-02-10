@@ -26,3 +26,19 @@
 #3  0x00007ffff728fa57 in RunThread (ptr=0x628d20) at utils/os_thread.c:193
 #4  0x00007ffff7bc6dd5 in start_thread () from /usr/lib64/libpthread.so.0
 #5  0x00007ffff6f60ead in clone () from /usr/lib64/libc.so.6
+
+
+#0  gf_dash_open (dash=0x628830, manifest_url=0x625c00 "http://194.124.220.37:6910/001/2/ch00000090990000001186/manifest.mpd?JITPMediaType=DASH&virtualDomain=001.live_hls.zte.com&IASHttpSessionId=OTT2172120190120132739000011")
+    at media_tools/dash_client.c:6503
+#1  0x00007ffff53334dd in MPD_ConnectService (plug=0x627e60, serv=0x628070, 
+    url=0x625c00 "http://194.124.220.37:6910/001/2/ch00000090990000001186/manifest.mpd?JITPMediaType=DASH&virtualDomain=001.live_hls.zte.com&IASHttpSessionId=OTT2172120190120132739000011") at mpd_in.c:1215
+#2  0x00007ffff76318fc in gf_term_connect_object (term=0x61de50, odm=0x625510, 
+    serviceURL=0x61ad70 "http://194.124.220.37:6910/001/2/ch00000090990000001186/manifest.mpd?JITPMediaType=DASH&virtualDomain=001.live_hls.zte.com&IASHttpSessionId=OTT2172120190120132739000011", parent_url=0x0)
+    at terminal/terminal.c:1673
+#3  0x00007ffff762e5b9 in gf_term_connect_from_time_ex (term=0x61de50, 
+    URL=0x61ad70 "http://194.124.220.37:6910/001/2/ch00000090990000001186/manifest.mpd?JITPMediaType=DASH&virtualDomain=001.live_hls.zte.com&IASHttpSessionId=OTT2172120190120132739000011", startTime=0, pause_at_first_frame=0, 
+    secondary_scene=GF_FALSE, parent_path=0x0) at terminal/terminal.c:589
+#4  0x00007ffff762f7a9 in gf_term_connect (term=0x61de50, 
+    URL=0x61ad70 "http://194.124.220.37:6910/001/2/ch00000090990000001186/manifest.mpd?JITPMediaType=DASH&virtualDomain=001.live_hls.zte.com&IASHttpSessionId=OTT2172120190120132739000011") at terminal/terminal.c:923
+#5  0x0000000000408cfe in mp4client_main (argc=1, argv=0x7fffffffe4a8) at main.c:1744
+#6  0x000000000040af75 in main (argc=1, argv=0x7fffffffe4a8) at main.c:2439
